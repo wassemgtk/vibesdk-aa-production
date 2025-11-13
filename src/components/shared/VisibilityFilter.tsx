@@ -28,8 +28,8 @@ const visibilityOptions = [
     value: 'private', 
     label: 'Private', 
     icon: Lock,
-    color: 'from-orange-500/20 to-red-500/20',
-    activeColor: 'from-orange-500/10 to-red-500/10'
+    color: 'from-gray-500/20 to-gray-600/20',
+    activeColor: 'from-gray-500/10 to-gray-600/10'
   },
 ];
 

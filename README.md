@@ -1,6 +1,6 @@
-# 🧡 Cloudflare Vibe SDK
+# Writer-AA-Builder
 
-> **An open source full-stack AI webapp generator** – Deploy your own instance of Cloudflare VibeSDK, an AI vibe coding platform that you can run and customize yourself.
+> **An open source full-stack AI webapp generator** – Deploy your own instance of Writer-AA-Builder, an AI coding platform that you can run and customize yourself.
 
 <div align="center">
 
@@ -25,9 +25,9 @@
 
 ---
 
-## ✨ What is Cloudflare VibeSDK?
+## ✨ What is Writer-AA-Builder?
 
-Cloudflare VibeSDK is an open source AI vibe coding platform built on Cloudflare's developer platform. If you're building an AI-powered platform for building applications, this is a great example that you can deploy and customize to build the whole platform yourself. Once the platform is deployed, users can say what they want to build in natural language, and the AI agent will create and deploy the application. 
+Writer-AA-Builder is an open source AI coding platform that allows you to build applications using natural language. If you're building an AI-powered platform for building applications, this is a great example that you can deploy and customize to build the whole platform yourself. Once the platform is deployed, users can say what they want to build in natural language, and the AI agent will create and deploy the application. 
 
 **🌐 [Experience it live at build.cloudflare.dev](https://build.cloudflare.dev)** – Try it out before deploying your own instance!
 
@@ -53,9 +53,9 @@ Let your customers extend your product's functionality without learning your API
 🚀 **One-Click Deploy** – Deploy generated apps to Workers for Platforms  
 📦 **GitHub Integration** – Export code directly to your repositories  
 
-### 🏗️ Built on Cloudflare's Platform
+### 🏗️ Built on Modern Cloud Infrastructure
 
-Cloudflare VibeSDK Build utilizes the full Cloudflare developer ecosystem:
+Writer-AA-Builder utilizes modern cloud infrastructure:
 
 - **Frontend**: React + Vite with modern UI components
 - **Backend**: Workers with Durable Objects for AI agents  
@@ -279,7 +279,7 @@ export default {
 ```
 
 ### Iteration-based Code Generation
-Cloudflare VibeSDK generates apps in intelligent phases:
+Writer-AA-Builder generates apps in intelligent phases:
 
 1. **Planning Phase**: Analyzes requirements, creates file structure
 2. **Foundation Phase**: Generates package.json, basic setup files  
@@ -377,7 +377,7 @@ Example: If `MAX_SANDBOX_INSTANCES` is set both as an environment variable (`exp
 
 ## 🔒 Security & Privacy
 
-Cloudflare VibeSDK implements enterprise-grade security:
+Writer-AA-Builder implements enterprise-grade security:
 
 - 🔐 **Encrypted Secrets**: All API keys stored with Cloudflare encryption
 - 🏰 **Sandboxed Execution**: Generated apps run in completely isolated containers
@@ -436,7 +436,7 @@ Cloudflare VibeSDK implements enterprise-grade security:
 
 ## 🤝 Contributing
 
-Want to contribute to Cloudflare VibeSDK? Here's how:
+Want to contribute to Writer-AA-Builder? Here's how:
 
 1. **🍴 Fork** via the Deploy button (creates your own instance!)
 2. **💻 Develop** new features or improvements  

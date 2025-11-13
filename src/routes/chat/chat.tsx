@@ -885,7 +885,7 @@ export default function Chat() {
 
 										<div className="flex items-center justify-end gap-1.5">
 											{/* <button
-												className="flex items-center gap-1.5 px-2 py-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-md transition-all duration-200 text-xs font-medium shadow-sm"
+												className="flex items-center gap-1.5 px-2 py-1 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 text-white rounded-md transition-all duration-200 text-xs font-medium shadow-sm"
 												onClick={() => handleDeployToCloudflare(chatId!)}
 												disabled={isDeploying}
 												title="Save & Deploy"
@@ -1109,8 +1109,8 @@ export default function Chat() {
 											</div>
 
 											<div className="flex items-center justify-end gap-1.5">
-												{/* <button
-													className="flex items-center gap-1.5 px-2 py-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-md transition-all duration-200 text-xs font-medium shadow-sm"
+												<button
+													className="flex items-center gap-1.5 px-2 py-1 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 text-white rounded-md transition-all duration-200 text-xs font-medium shadow-sm"
 													onClick={() => handleDeployToCloudflare(chatId!)}
 													disabled={isDeploying}
 													title="Save & Deploy"

@@ -354,7 +354,7 @@ export function GitHubExportModal({
                         ) : exportResult.repositoryAlreadyExists && exportResult.existingRepositoryUrl ? (
                             <StatusMessage
                                 icon={AlertCircle}
-                                iconColor="text-orange-500"
+                                iconColor="text-gray-500"
                                 title="Repository Already Exists"
                                 message="A repository with this name already exists on your GitHub account:"
                             >

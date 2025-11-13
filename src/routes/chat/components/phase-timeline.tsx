@@ -39,7 +39,7 @@ const getCompletedPhaseCount = (phases: PhaseTimelineItem[]) =>
 // Consolidated status-specific loader components
 interface StatusLoaderProps {
 	size?: 'sm' | 'md';
-	color?: 'accent' | 'blue' | 'orange' | 'tertiary' | 'green';
+	color?: 'accent' | 'blue' | 'gray' | 'tertiary' | 'green';
 }
 
 const StatusLoader = ({ size = 'md', color = 'accent' }: StatusLoaderProps) => {
@@ -47,7 +47,7 @@ const StatusLoader = ({ size = 'md', color = 'accent' }: StatusLoaderProps) => {
 	const colorMap = {
 		accent: 'text-accent',
 		blue: 'text-blue-400',
-		orange: 'text-orange-400',
+		gray: 'text-gray-400',
 		tertiary: 'text-text-tertiary',
 		green: 'text-green-500'
 	};
@@ -59,7 +59,7 @@ const StatusCheck = ({ size = 'md', color = 'green' }: StatusLoaderProps) => {
 	const colorMap = {
 		accent: 'text-accent',
 		blue: 'text-blue-400',
-		orange: 'text-orange-400',
+		gray: 'text-gray-400',
 		tertiary: 'text-text-tertiary',
 		green: 'text-green-500'
 	};
@@ -89,7 +89,7 @@ function StatusIcon({ status, size = 'md', className }: StatusIconProps) {
 		case 'completed':
 			return <Check className={clsx(iconClasses, 'text-green-500', className)} />;
 		case 'cancelled':
-			return <XCircle className={clsx(iconClasses, 'text-orange-400', className)} />;
+			return <XCircle className={clsx(iconClasses, 'text-gray-400', className)} />;
 		case 'error':
 			return <AlertCircle className={clsx(iconClasses, 'text-red-500', className)} />;
 		case 'active':
@@ -363,7 +363,7 @@ export function PhaseTimeline({
 			return {
 				text: 'Deploying preview',
 				subtitle: 'Updating preview environment...',
-				icon: <StatusLoader color="orange" />,
+				icon: <StatusLoader color="gray" />,
 				badge: phaseBadge
 			};
 		}
@@ -536,8 +536,8 @@ export function PhaseTimeline({
                                         }}
                                         disabled={!!isDeploying}
                                         className="ml-2 flex items-center gap-1.5 px-2.5 py-1 bg-accent hover:bg-accent/90 disabled:bg-accent/50 text-white rounded-full text-xs font-medium transition-colors disabled:cursor-not-allowed"
-                                        title={isDeploying ? 'Deploying...' : 'Deploy to Cloudflare'}
-                                        aria-label={isDeploying ? 'Deploying' : 'Deploy to Cloudflare'}
+										title={isDeploying ? 'Deploying...' : 'Deploy to Production'}
+										aria-label={isDeploying ? 'Deploying' : 'Deploy to Production'}
                                     >
                                         {isDeploying ? (
                                             <StatusLoader size="sm" color="accent" />
@@ -632,7 +632,7 @@ export function PhaseTimeline({
 														) : (
 															<Zap className="w-3 h-3" />
 														)}
-														{isDeploying ? 'Deploying...' : 'Deploy to Cloudflare'}
+														{isDeploying ? 'Deploying...' : 'Deploy to Production'}
 													</button>
 												)}
 											</div>
@@ -720,8 +720,8 @@ export function PhaseTimeline({
 										)}
 										{staticIssueCount > 0 && (
 											<span className="inline-flex items-center gap-1">
-												<div className="w-1.5 h-1.5 rounded-full bg-orange-400" />
-												<span className="text-orange-400/80">{staticIssueCount} warning{staticIssueCount > 1 ? 's' : ''}</span>
+												<div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
+												<span className="text-gray-400/80">{staticIssueCount} warning{staticIssueCount > 1 ? 's' : ''}</span>
 											</span>
 										)}
 									</motion.span>
@@ -871,12 +871,12 @@ export function PhaseTimeline({
 											);
 										} else if (isPreviewDeploying) {
 											return (
-												<div className="space-y-1 relative bg-orange-50/5 border border-orange-200/20 rounded-lg p-3">
+												<div className="space-y-1 relative bg-gray-50/5 border border-gray-200/20 rounded-lg p-3">
 													<div className="flex items-center gap-2">
-														<StatusLoader size="sm" color="orange" />
-														<span className="text-sm font-medium text-orange-400">Deploying preview...</span>
+														<StatusLoader size="sm" color="gray" />
+														<span className="text-sm font-medium text-gray-400">Deploying preview...</span>
 													</div>
-													<span className="text-xs text-orange-300/80 ml-5">Updating your preview environment</span>
+													<span className="text-xs text-gray-300/80 ml-5">Updating your preview environment</span>
 												</div>
 											);
 										}

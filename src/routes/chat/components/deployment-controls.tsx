@@ -153,7 +153,7 @@ export function DeploymentControls({
 					icon: null,
 					titleColor: "text-text-tertiary dark:text-text-tertiary",
 					subtitleColor: "text-text-tertiary/80 dark:text-text-tertiary/70",
-					title: "Deploy to Cloudflare",
+					title: "Deploy to Production",
 					subtitle: "Deploy will be enabled after Phase 1 is implemented",
 					buttonDisabled: true,
 					buttonVariant: "secondary" as const,
@@ -168,10 +168,10 @@ export function DeploymentControls({
 					titleColor: "text-text-primary dark:text-text-primary",
 					subtitleColor: "text-text-tertiary dark:text-text-tertiary",
 					title: "Ready to Deploy",
-					subtitle: "It's Free! Deploys to Cloudflare Workers for Platform",
+					subtitle: "Deploy your application to production",
 					buttonDisabled: false,
 					buttonVariant: "primary" as const,
-					buttonClass: "bg-accent text-white border-orange-500 dark:border-orange-600 hover:scale-105"
+					buttonClass: "bg-accent text-white border-accent dark:border-accent hover:scale-105"
 				};
 			
 			case DeploymentState.DEPLOYING:
@@ -181,7 +181,7 @@ export function DeploymentControls({
 					icon: <Loader className="w-2.5 h-2.5 text-white animate-spin" />,
 					titleColor: "text-blue-900 dark:text-blue-100",
 					subtitleColor: "text-blue-600 dark:text-blue-300",
-					title: "Deploying to Cloudflare",
+					title: "Deploying to Production",
 					subtitle: "Please wait while your application is being deployed...",
 					buttonDisabled: true,
 					buttonVariant: "primary" as const,
@@ -195,7 +195,7 @@ export function DeploymentControls({
 					icon: <Loader className="w-2.5 h-2.5 text-white animate-spin" />,
 					titleColor: "text-blue-900 dark:text-blue-100",
 					subtitleColor: "text-blue-600 dark:text-blue-300",
-					title: "Redeploying to Cloudflare",
+					title: "Redeploying to Production",
 					subtitle: "Please wait while your application is being redeployed...",
 					buttonDisabled: true,
 					buttonVariant: "primary" as const,
@@ -214,7 +214,7 @@ export function DeploymentControls({
 					buttonDisabled: !isPhase1Complete,
 					buttonVariant: "primary" as const,
 					buttonClass: isPhase1Complete 
-						? "bg-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-700 text-white border-orange-500 dark:border-orange-600 hover:scale-105"
+						? "bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700 text-white border-gray-700 dark:border-gray-600 hover:scale-105"
 						: "bg-bg-3 dark:bg-bg-3 text-text-tertiary dark:text-text-tertiary border-muted dark:border-muted cursor-not-allowed"
 				};
 			
@@ -279,7 +279,7 @@ export function DeploymentControls({
 							) : (
 								<>
 									<Zap className="w-4 h-4 mr-2" />
-									Deploy to Cloudflare
+									Deploy to Production
 								</>
 							)}
 						</Button>
@@ -305,7 +305,7 @@ export function DeploymentControls({
 								🎉 Successfully Deployed!
 							</div>
 							<div className="text-xs text-green-700 dark:text-green-300 mt-0.5">
-								Your application is now live on Cloudflare Workers
+								Your application is now live in production
 							</div>
 						</div>
 					</div>
