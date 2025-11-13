@@ -1135,7 +1135,7 @@ export default function Chat() {
 												>
 													<Github className="size-3.5" />
 													GitHub
-												</button> */}
+												</button>
 												<ModelConfigInfo
 													configs={modelConfigs}
 													onRequestConfigs={handleRequestConfigs}
